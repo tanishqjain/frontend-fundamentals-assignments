@@ -1,8 +1,3 @@
-Certainly! Here's the updated section in the README.md file that includes instructions for placing solution files in the "solutions" folder inside the assignment folder:
-
-```markdown
-# Assignment Submission Guidelines
-
 ## Overview
 This repository is used for submitting assignments. Follow the instructions below to submit your assignment successfully.
 
