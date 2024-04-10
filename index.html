@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Join a Social Network</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Join a Social Network</h1>
+    <form id="joinForm"> <div class="form-group">
+            <label for="fullName">Full name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="about">About you:</label>
+            <textarea id="about" name="about"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="photo">Photo:</label>
+            <input type="file" id="photo" name="photo">
+            <span id="chosenFile">No file chosen</span> </div>
+
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <script>
+        const photoInput = document.getElementById("photo");
+        const chosenFileSpan = document.getElementById("chosenFile");
+
+        photoInput.addEventListener("change", (event) => {
+            const fileName = event.target.files[0].name;
+            chosenFileSpan.textContent = fileName;
+        });
+
+        const submitForm = document.getElementById("joinForm");
+
+        submitForm.addEventListener("submit", (event) => {
+            event.preventDefault(); 
+        });
+    </script>
+</body>
+</html>
