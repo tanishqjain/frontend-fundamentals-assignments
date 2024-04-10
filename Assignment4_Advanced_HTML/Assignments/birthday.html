@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday Message Creator</title>
+<style>
+  form .form-group {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 15px;
+  }
+</style>
+</head>
+<body>
+  <h1>Happy Birthday Message Creator</h1>
+  <form id="birthdayForm">
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" pattern="[a-zA-Z0-9-_.]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*">
+    </div>
+    <div class="form-group">
+      <label for="sendDate">Date to Send:</label>
+      <input type="date" id="sendDate" name="sendDate">
+    </div>
+    <div class="form-group">
+      <label for="messageColor">Message Color:</label>
+      <input type="color" id="messageColor" name="messageColor">
+    </div>
+    <div class="form-group">
+      <label for="blinkNumber">Number of Blinks:</label>
+      <input type="number" id="blinkNumber" name="blinkNumber" min="0" max="10" value="0">
+    </div>
+    <div class="form-group">
+      <label for="musicVolume">Music Volume:</label>
+      <input type="range" id="musicVolume" name="musicVolume" min="0" max="50" value="20">
+    </div>
+    <button type="submit">Send Birthday Message</button>
+  </form>
+</body>
+</html>
