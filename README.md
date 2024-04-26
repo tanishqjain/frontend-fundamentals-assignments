@@ -1,3 +1,6 @@
+## Overview
+This repository is used for submitting assignments. Follow the instructions below to submit your assignment successfully.
+
 ## Steps to Submit Assignment
 
 ### 1. Clone this repository
@@ -23,27 +26,30 @@ Replace `<assignmentNumber>` with the number or identifier of your assignment.
 ### 4. Work on Your Assignment
 Add your assignment submission files to your feature branch and make any necessary changes.
 
-### 5. Commit Changes
+### 5. Place Solution Files (if required)
+If your assignment requires solution files, place them in the "solutions" folder inside the assignment folder.
+
+### 6. Commit Changes
 Commit your changes to your feature branch using the following commands:
 ```bash
 git add .
 git commit -m "Add assignment submission"
 ```
 
-### 6. Push Changes
+### 7. Push Changes
 Push your feature branch to the remote repository:
 ```bash
 git push origin feature/<assignmentNumber>
 ```
 Replace `<assignmentNumber>` with the number or identifier of your assignment.
 
-### 7. Create a Pull Request
+### 8. Create a Pull Request
 Once you have pushed your changes to your feature branch, go to the repository on GitHub and create a pull request from your feature branch to your chosen development branch (`dev/dheeraj` or `dev/cherishma`). Add me as a reviewer for your pull request.
 
-### 8. Wait for Review
+### 9. Wait for Review
 Wait for me to review your pull request. Make any necessary changes based on their feedback.
 
-### 9. Merge Pull Request
+### 10. Merge Pull Request
 Once your pull request is approved, merge it into the development branch.
 
 ## Additional Notes
