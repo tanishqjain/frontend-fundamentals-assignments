@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vanilla JavaScript Example</title>
+</head>
+<body>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+
+    <script>
+        // Select all div elements with class 'box'
+        var boxes = document.querySelectorAll('.box');
+
+        // Function to handle the click event
+        function handleClick(event) {
+            // Change the background color to red
+            event.target.style.backgroundColor = 'red';
+            // Create a new p element
+            var p = document.createElement('p');
+            p.textContent = 'New content added!';
+            // Append the new p element to the div
+            event.target.appendChild(p);
+            // Make an AJAX request
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://api.example.com/data', true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    // Display the data inside the div
+                    var dataDiv = document.createElement('div');
+                    dataDiv.textContent = data.message;
+                    event.target.appendChild(dataDiv);
+                }
+            };
+            xhr.send();
+        }
+
+        // Add click event listener to each box
+        boxes.forEach(function(box) {
+            box.addEventListener('click', handleClick);
+        });
+    </script>
+</body>
+</html>

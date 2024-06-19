@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+
+    <script>
+        $(document).ready(function() {
+            // Select all div elements with class 'box' and add click event listener
+            $('.box').click(function() {
+                // Change the background color to red
+                $(this).css('background-color', 'red')
+                       // Append a new p element
+                       .append('<p>New content added!</p>')
+                       // Make an AJAX request
+                       .append('<div class="loading">Loading...</div>');
+
+                $.ajax({
+                    url: 'https://api.example.com/data',
+                    method: 'GET',
+                    success: function(data) {
+                        // Display the data inside the div
+                        $('.loading').remove();
+                        $('<div></div>').text(data.message).appendTo('.box');
+                    },
+                    error: function() {
+                        $('.loading').remove();
+                        $('<div></div>').text('Error loading data').appendTo('.box');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
