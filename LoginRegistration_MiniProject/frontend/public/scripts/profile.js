@@ -13,7 +13,7 @@ $(document).ready(function () {
   if (cookieValue) {
     $.ajax({
       type: "GET",
-      url: "http://localhost:5000/api/users/profile",
+      url: "https://registrationlogin-demoapi.azurewebsites.net/api/users/profile",
       headers: { "x-auth-token": cookieValue },
       contentType: "application/json",
       dataType: "json",
@@ -35,7 +35,7 @@ function updateProfile(event) {
 
   $.ajax({
     type: "PATCH",
-    url: "http://localhost:5000/api/users/profile",
+    url: "https://registrationlogin-demoapi.azurewebsites.net/api/users/profile",
     headers: { "x-auth-token": cookieValue },
     data: JSON.stringify(userProfile),
     contentType: "application/json",

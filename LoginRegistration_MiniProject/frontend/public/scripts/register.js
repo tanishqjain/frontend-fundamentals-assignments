@@ -15,7 +15,7 @@ $(document).ready(function () {
 
     $.ajax({
       type: "POST",
-      url: "http://localhost:5000/api/users/register",
+      url: "https://registrationlogin-demoapi.azurewebsites.net/api/users/register",
       data: JSON.stringify(user),
       contentType: "application/json",
       dataType: "json",
