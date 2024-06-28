@@ -1,14 +1,17 @@
-function getCookie(name){
-    let cookieArr = document.cookie.split(";");
-    for (let i = 0; i < cookieArr.length; i++) {
-      let cookiePair = cookieArr[i].split("=");
-      if (name == cookiePair[0].trim()) {
-        return decodeURIComponent(cookiePair[1]);
-      }
-    }
-    return null;
-}
-
 $(document).ready(function () {
-    
+  $(".logged-in").fadeOut();
+  $(".logged-out").fadeIn();
+
+  var cookieValue = $.cookie("sessionToken");
+  if (cookieValue) {
+    $(".logged-in").fadeIn();
+    $(".logged-out").fadeOut();
+  }
+
+  $("#logout-button").click(function (e) {
+    e.preventDefault();
+    $.removeCookie("sessionToken");
+    $(".logged-in").fadeOut();
+    $(".logged-out").fadeIn();
+  });
 });

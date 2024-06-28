@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/6c565dfa-4b79-43bf-9052-9ff455211ac1/resourceGroups/registrationLogin-demoApi-us-west/providers/Microsoft.Web/sites/registrationLogin-demoApi",
+    "appService.deploySubpath": "."
+}

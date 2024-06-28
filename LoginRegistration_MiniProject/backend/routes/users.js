@@ -63,6 +63,7 @@ router.post("/register", async (req, res) => {
       res.json({ token });
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json({ msg: "Server error" });
   }
 });
@@ -117,6 +118,7 @@ router.post("/login", async (req, res) => {
       res.json({ token });
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json({ msg: "Server error" });
   }
 });
@@ -165,6 +167,7 @@ router.get("/profile", auth, async (req, res) => {
     if (!user) return res.status(404).json({ msg: "User not found" });
     res.json(user);
   } catch (err) {
+    console.log(err);
     res.status(500).json({ msg: "Server error" });
   }
 });
@@ -233,6 +236,7 @@ router.patch("/profile", auth, async (req, res) => {
     await user.save();
     res.json(user);
   } catch (err) {
+    console.log(err);
     res.status(500).json({ msg: "Server error" });
   }
 });

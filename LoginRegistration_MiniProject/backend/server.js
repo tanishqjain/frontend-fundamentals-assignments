@@ -4,9 +4,11 @@ const config = require("./config");
 const swaggerUi = require("swagger-ui-express");
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerOptions = require("./swaggerConfig");
+const cors = require("cors");
+
 
 const app = express();
-
+app.use(cors());
 // Middleware
 app.use(express.json());
 
